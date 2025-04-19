@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenshot Capture</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Screenshot Capture</h1>
+    
+    <div class="control-group">
+      <label for="interval">Capture Interval (seconds):</label>
+      <input type="number" id="interval" min="1" value="5">
+    </div>
+    
+    <div class="control-group">
+      <label for="format">Image Format:</label>
+      <select id="format">
+        <option value="png">PNG</option>
+        <option value="jpg">JPEG</option>
+      </select>
+    </div>
+    
+    <div class="control-group">
+      <label for="folderPath">Save Location:</label>
+      <div class="path-input">
+        <input type="text" id="folderPath" readonly>
+        <button id="browseBtn">Browse</button>
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <label>
+        <input type="checkbox" id="notifications" checked>
+        Show notifications
+      </label>
+    </div>
+    
+    <div class="button-group">
+      <button id="startBtn">Start Capture</button>
+      <button id="stopBtn">Stop Capture</button>
+    </div>
+    
+    <div id="status">Ready to capture screenshots</div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
